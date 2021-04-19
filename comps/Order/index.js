@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import {useRouter} from 'next/router';
 
 
 
-const OrderCont = styled.div`
+const OrderCont = styled.button`
     background-color:#7BC67B;
     border-radius: 20px 20px 20px 20px;
     min-height:50px;
@@ -26,10 +27,10 @@ const Order = ({
     word="Place Order",
     
 }) => {
-    return <OrderCont>
+    const router = useRouter();
+    return <OrderCont onClick={()=>router.push("/confirmation")}>
         <OrderPlace>
             {word}
-            
         </OrderPlace>
     </OrderCont>
 }

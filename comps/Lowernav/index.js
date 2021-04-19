@@ -115,9 +115,8 @@ const Lowernav = ({
     nearby="Near By",
     cart="Cart",
     user="User",
-    routeTo2="/popular",
-    routeTo1="/index"
-
+    routeTo1="/index",
+    routeTo2="/popular"
 }) => {
     const router = useRouter();
     return <LowernavCont>

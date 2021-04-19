@@ -4,6 +4,7 @@ import Lowernav from '../comps/Lowernav';
 import StoreCard from '../comps/StoreCard';
 import styled from 'styled-components';
 import SearchBar from '../comps/SearchBar';
+import Poppicks from '../comps/Poppicks';
 // import styles from '../styles/globals.css';
 
 const HomeCont = styled.div`
@@ -45,9 +46,9 @@ export default function Home({
         {header}
       </HeaderTitle>
       <SearchBar />
-      <PopularPicks>
+      <Poppicks>
         {PopularPicks}
-      </PopularPicks>
+      </Poppicks>
       <StoreCard />
       <StoreCard />
       <StoreCard />

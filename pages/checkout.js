@@ -4,6 +4,9 @@ import Lowernav from '../comps/Lowernav';
 import StoreCard from '../comps/StoreCard';
 import styled from 'styled-components';
 import React, {useState} from 'react';
+import Checkout from '../comps/Checkout';
+import Order from '../comps/Order';
+import CheckoutHeader from '../comps/CheckoutHeader';
 
 const HomeCont = styled.div`
   .content {
@@ -19,22 +22,12 @@ const HeaderTitle = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 160px;
+  margin-top: 150px;
   font-family: 'Montserrat', serif;
-  font-weight: bold;
-  font-size: 35px;
 `;
 
-const GoogleMap = styled.div`
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  border: 1px solid black;
-`;
 
-export default function Home({
-  header="Farms next to you!"
-}) {
+export default function Home() {
   const [cardstate, setCardState] = useState(false);
 
   var left = 10;
@@ -43,30 +36,37 @@ export default function Home({
     console.log("do stuff")
   }
 
-  const HandleClick = () =>{
-    setCardState(!cardstate);
-  }
+ 
 
   console.log("cardstate", cardstate);
   return <HomeCont>
     <Head>
-      <title>Home Page</title>
+      <title>Checkout Page</title>
     </Head>
-    <Header />
+    <CheckoutHeader></CheckoutHeader>
     <HeaderTitle>
-      {header}
+     
     </HeaderTitle>
+    
+    <StoreCard
+    StoreName="John's Apples"
+    Delivery="Delivery: In 30 minutes"
+    left = "30"
+   ></StoreCard>
     <div className="content">
-      <GoogleMap>
-        <iframe src="//maps.google.com/maps?q=53.3381768,-6.2613077&z=15&output=embed"></iframe>
-      </GoogleMap>
-      <StoreCard 
-        StoreName="Malwart"
-        left={left}
-      />
-      <StoreCard left={left}/>
-      <StoreCard left={cardstate ? 100 : 10}/>
-      <button onClick={HandleClick}>Handle Function</button>
+
+    <br></br>
+<Checkout></Checkout>
+    <br></br>
+<Checkout></Checkout>
+    <br></br>
+<Checkout></Checkout>
+    <br></br>
+<Checkout></Checkout>
+    <br></br>
+<Checkout></Checkout>
+    <br></br>
+<Order></Order>
     </div>
     <Lowernav />
   </HomeCont>

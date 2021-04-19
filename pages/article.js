@@ -1,10 +1,9 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import Header from '../comps/Header';
 import Lowernav from '../comps/Lowernav';
-import StoreCard from '../comps/StoreCard';
 import styled from 'styled-components';
-import SearchBar from '../comps/SearchBar';
-// import styles from '../styles/globals.css';
+import React, {useState} from 'react';
+import Textbox from '../comps/Article';
 
 const HomeCont = styled.div`
   .content {
@@ -24,33 +23,34 @@ const HeaderTitle = styled.p`
   font-family: 'Montserrat', serif;
 `;
 
-const GoogleMap = styled.div`
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  border: 1px solid black;
+const Images = styled.div`
+width: "500px"
+height: "500px"
 `;
 
+
 export default function Home({
-  header="Farms next to you!",
-  PopularPicks="Popular Picks"
 }) {
   return <HomeCont>
     <Head>
-      <title>Popular Items</title>
+      <title>Article</title>
     </Head>
     <Header />
+    <HeaderTitle>
+    </HeaderTitle>
     <div className="content">
-      <HeaderTitle>
-        {header}
-      </HeaderTitle>
-      <SearchBar />
-      <PopularPicks>
-        {PopularPicks}
-      </PopularPicks>
-      <StoreCard />
-      <StoreCard />
-      <StoreCard />
+     <Images>
+         <img src="https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/5/1/0/7/2097015-1-eng-GB/Why-do-people-buy-organic-Separating-myth-from-motivation.jpg" style={{
+           width: "400px",
+           height: "400px",
+           }}>
+
+           </img>
+     </Images>
+
+     <Textbox>
+         
+     </Textbox>
     </div>
     <Lowernav />
   </HomeCont>

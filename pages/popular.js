@@ -15,6 +15,12 @@ const HomeCont = styled.div`
     align-items: center;
     padding: 10px;
   }
+
+  .items {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+  }
 `;
 
 const HeaderTitle = styled.p`
@@ -46,12 +52,19 @@ export default function Home({
         {header}
       </HeaderTitle>
       <SearchBar />
-      <Poppicks>
-        {PopularPicks}
-      </Poppicks>
-      <StoreCard />
-      <StoreCard />
-      <StoreCard />
+
+      <div className="items">
+        <Poppicks />
+        <Poppicks />
+      </div>
+      <div className="items">
+        <Poppicks />
+        <Poppicks />
+      </div>
+      <div className="items">
+        <Poppicks />
+        <Poppicks />
+      </div>
     </div>
     <Lowernav />
   </HomeCont>

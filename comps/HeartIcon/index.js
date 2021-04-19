@@ -4,13 +4,14 @@ import {AiFillHeart} from 'react-icons/ai'
 
 const HeartCont = styled.div `
     display: flex;
+    margin-left: 5px;
+    margin-top: 5px;
     
 
     .img {
-        width: 52px;
-        height: 52px;
-        color: ${props=>props.heartcolor};
-        
+        width: 22px;
+        height: 22px;
+        color: #d94141;
     }
 
 `
@@ -18,11 +19,10 @@ const HeartCont = styled.div `
 
 
 const HeartIcon = ({
-    heartcolor="#fff",
     
 }) => {
     return <HeartCont>
-        <AiFillHeart className="img" heartcolor={heartcolor} />
+        <AiFillHeart className="img" />
     </HeartCont>
 }
 

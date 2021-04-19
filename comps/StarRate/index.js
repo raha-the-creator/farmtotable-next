@@ -4,26 +4,21 @@ import {AiFillStar} from 'react-icons/ai'
 
 const StarCont = styled.div `
     display: flex;
-    justify-content: flex-end
-    
+    justify-content: flex-end;
 
     .img {
-        width: 52px;
-        height: 52px;
-        color: ${props=>props.starcolor};
-        
+        width: 17px;
+        height: 17px;
+        color: #f7cf1b;
     }
-
 `
 
 
 
-const StarIcon = ({
-    starcolor="#fff",
-    
-}) => {
+
+const StarIcon = () => {
     return <StarCont>
-        <AiFillStar className="img" starcolor={starcolor} />
+        <AiFillStar className="img" />
     </StarCont>
 }
 

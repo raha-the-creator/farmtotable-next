@@ -3,7 +3,7 @@ import Header from '../comps/Header';
 import Lowernav from '../comps/Lowernav';
 import StoreCard from '../comps/StoreCard';
 import styled from 'styled-components';
-import React, {useState} from 'react';
+// import styles from '../styles/globals.css';
 
 const HomeCont = styled.div`
   .content {
@@ -33,22 +33,9 @@ const GoogleMap = styled.div`
 export default function Home({
   header="Farms next to you!"
 }) {
-  const [cardstate, setCardState] = useState(false);
-
-  var left = 10;
-  if(cardstate === true){
-    left = 100;
-    console.log("do stuff")
-  }
-
-  const HandleClick = () =>{
-    setCardState(!cardstate);
-  }
-
-  console.log("cardstate", cardstate);
   return <HomeCont>
     <Head>
-      <title>Home Page</title>
+      <title>Popular Items</title>
     </Head>
     <Header />
     <HeaderTitle>
@@ -58,13 +45,9 @@ export default function Home({
       <GoogleMap>
         <iframe src="//maps.google.com/maps?q=53.3381768,-6.2613077&z=15&output=embed"></iframe>
       </GoogleMap>
-      <StoreCard 
-        StoreName="Malwart"
-        left={left}
-      />
-      <StoreCard left={left}/>
-      <StoreCard left={cardstate ? 100 : 10}/>
-      <button onClick={HandleClick}>Handle Function</button>
+      <StoreCard />
+      <StoreCard />
+      <StoreCard />
     </div>
     <Lowernav />
   </HomeCont>

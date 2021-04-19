@@ -6,9 +6,11 @@ const HeaderCont = styled.div`
     flex-direction: column;
     background-color: #545454;
     width: 490px;
-    height: 180px;
+    height: 130px;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top: 0;
 `;
 
 const HeaderTopCont = styled.div`
@@ -21,24 +23,28 @@ const HeaderTopCont = styled.div`
 `;
 
 const HeaderTopMenuImg = styled.img`
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin-left: 25px;
     margin-top: 30px;
     filter: brightness(0) invert(1);
 `;
 
 const HeaderTopProfImg = styled.img`
-    width: 60px;
-    height: 60px;
-    margin-top: 30px;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
     border-radius: 50%;
     border: 3px solid white;
 `;
 
+const HeaderTopCartCont = styled.div`
+    background-color: #B6D49E;
+`;
+
 const HeaderTopCartImg = styled.img`
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin-top: 30px;
     margin-right: 25px;
     filter: brightness(0) invert(1);
@@ -50,7 +56,9 @@ const HeaderTopCartImg = styled.img`
 const HeaderBotCont = styled.div`
     display: flex;
     flex-direction: column;
-    height: 50%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
 `;
 
 const HeaderBotUserText = styled.p`
@@ -60,12 +68,15 @@ const HeaderBotUserText = styled.p`
     font-weight: bold;
     color: white;
     justify-content: center;
+    margin-top: 15px;
 `;
 
 const HeaderBotDeliverText = styled.p`
     line-height: 10px;
     font-family: 'Montserrat', sans-serif;
     color: #52E74F;
+    margin-top: 3px;
+    margin-bottom: 5px;
 `;
 
 const Header = ({
@@ -76,7 +87,9 @@ const Header = ({
         <HeaderTopCont>
             <HeaderTopMenuImg src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"></HeaderTopMenuImg>
             <HeaderTopProfImg src="https://placekitten.com/100/100"></HeaderTopProfImg>
-            <HeaderTopCartImg src="https://cdn.iconscout.com/icon/free/png-256/shopping-cart-452-1163339.png"></HeaderTopCartImg>
+            <HeaderTopCartCont>
+                <HeaderTopCartImg src="https://cdn.iconscout.com/icon/free/png-256/shopping-cart-452-1163339.png"></HeaderTopCartImg>
+            </HeaderTopCartCont>
         </HeaderTopCont>
 
         <HeaderBotCont>

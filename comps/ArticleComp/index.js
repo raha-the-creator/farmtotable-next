@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import {useRouter} from 'next/router';
 
 const UserInput = styled.div`
     background-color:#E5EFD7;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 10px;
     height:360px;
     width:450px;
     display:inline-flex;
@@ -40,16 +41,13 @@ const UserFont = styled.p `
 `;
 
 const ArticleComp = () => {
-
-return <div style={{
-}}>
-<UserInput>
-<UserImg></UserImg>
-<UserFont>Should you go organic?</UserFont>
-</UserInput>
- 
-
-</div>
+    const router = useRouter();
+    return <div onClick={()=>router.push("/article")}>
+        <UserInput>
+        <UserImg></UserImg>
+        <UserFont>Should you go organic?</UserFont>
+        </UserInput>
+    </div>
 }
 
 export default ArticleComp;

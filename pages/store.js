@@ -6,7 +6,6 @@ import styled from 'styled-components';
 import SearchBar from '../comps/SearchBar';
 import Poppicks from '../comps/Poppicks';
 import StoreHead from '../comps/StoreHead';
-import ArticleComp from '../comps/ArticleComp';
 // import styles from '../styles/globals.css';
 
 const HomeCont = styled.div`
@@ -48,11 +47,11 @@ const PopularPicksText = styled.p`
 
 export default function Home({
   header="Farms next to you!",
-  PopularPicks="Popular Picks",
+  PopularPicks="Popular Picks at this Store",
 }) {
   return <HomeCont>
     <Head>
-      <title>Popular Items!</title>
+      <title>Store</title>
     </Head>
     <Header />
     <div className="content">
@@ -61,6 +60,7 @@ export default function Home({
       <HeaderTitle>
         {header}
       </HeaderTitle>
+      <StoreHead />
       <SearchBar />
 
       <PopularPicksText>
@@ -75,7 +75,10 @@ export default function Home({
         <Poppicks />
         <Poppicks />
       </div>
-      <ArticleComp />
+      <div className="items">
+        <Poppicks />
+        <Poppicks />
+      </div>
     </div>
     <Lowernav />
   </HomeCont>

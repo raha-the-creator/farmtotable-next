@@ -113,27 +113,27 @@ const LowernavUserText = styled.p`
 const Lowernav = ({
     home="Home",
     nearby="Near By",
-    cart="Cart",
+    cart="Articles",
     user="User",
     routeTo1="/index",
     routeTo2="/popular"
 }) => {
     const router = useRouter();
     return <LowernavCont>
-        <LowernavHomeCont onClick={()=>router.push(routeTo1)}>
+        <LowernavHomeCont onClick={()=>router.push("/")}>
             <LowernavHomeImg src="https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/home-512.png"></LowernavHomeImg>
             <LowernavHomeText>
                 {home}
             </LowernavHomeText>
         </LowernavHomeCont>
-        <LowernavNearbyCont onClick={()=>router.push(routeTo2)}>
+        <LowernavNearbyCont onClick={()=>router.push("/")}>
             <LowernavNearbyImg src="https://cdn3.iconfinder.com/data/icons/glypho-free/64/map-pin-marker-circle-512.png"></LowernavNearbyImg>
             <LowernavNearbyText>
                 {nearby}
             </LowernavNearbyText>
         </LowernavNearbyCont>
-        <LowernavCartCont>
-            <LowernavCartImg src="https://cdn.iconscout.com/icon/free/png-256/shopping-cart-452-1163339.png"></LowernavCartImg>
+        <LowernavCartCont  onClick={()=>router.push("/popular")}>
+            <LowernavCartImg src="http://cdn.onlinewebfonts.com/svg/img_384216.png"></LowernavCartImg>
             <LowernavCartText>
                 {cart}
             </LowernavCartText>

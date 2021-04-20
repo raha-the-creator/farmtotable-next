@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {useRouter} from 'next/router';
 
 const BackInput = styled.div`
     background-color:#DDD3BA;
@@ -22,11 +23,12 @@ const BackFont = styled.p `
 `;
 
 const Back = () => {
+const router = useRouter();
 return <div style={{
     alignItems:"center",
     justifyContent: "center",
 
-}}>
+}} onClick={()=>router.push("/")}>
 <BackInput>
     <BackFont>Back to Home BackMenu</BackFont>
 </BackInput>

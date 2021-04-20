@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import {useRouter, userouter} from 'next/router'
-import Image from 'next/image'
+import {useRouter} from 'next/router';
+import Image from 'next/image';
 
 import StarIcon from '../StarRate'
 import HeartIcon from '../HeartIcon';
@@ -68,15 +68,14 @@ const Poppicks = ({
     text2="$25",
     heartcolor="#fc0303"
 }) =>{
-
-    const router = useRouter()
+    const router = useRouter();
     return <PickCont>
         <div id="imgs">
             <div className="hearts">
                 <HeartIcon heartcolor="red" />
             </div>
 
-            <div id="img">
+            <div id="img" onClick={()=>router.push("/")}>
             <Image 
                 alt="apple icon"
                 src="/appleicon.png"

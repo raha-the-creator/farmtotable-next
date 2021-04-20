@@ -14,6 +14,7 @@ const SearchBarCont = styled.div`
     width: 240px;
     height: 45px;
     padding: 4px;
+    margin-top: 20px;
 `;
 
 const SearchBarIcon = styled.div`

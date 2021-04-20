@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import CartIcon from '../CartIcon';
+import {useRouter} from 'next/router';
 
 const HeaderCont = styled.div`
     display: flex;
@@ -82,11 +83,12 @@ const Header = ({
     userName="user",
     address="Willingdon Ave"
 }) => {
+    const router = useRouter();
     return <HeaderCont>
         <HeaderTopCont>
             <HeaderTopMenuImg src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"></HeaderTopMenuImg>
             <HeaderTopProfImg src="https://placekitten.com/100/100"></HeaderTopProfImg>
-            <HeaderTopCartCont>
+            <HeaderTopCartCont onClick={()=>router.push("/checkout")}>
             <CartIcon/>
             </HeaderTopCartCont>
             

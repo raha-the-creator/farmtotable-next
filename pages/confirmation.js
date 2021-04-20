@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import React, {useState} from 'react';
 import Confirmation from '../comps/Confirmation';
 import BackMenu from '../comps/BackMenu';
+import {useRouter} from 'next/router';
 
 const HomeCont = styled.div`
   .content {

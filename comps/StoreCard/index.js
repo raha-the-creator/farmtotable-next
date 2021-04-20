@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {useRouter} from 'next/router';
 
 const StoreCardCont = styled.div`
     display: flex;
@@ -12,9 +13,9 @@ const StoreCardCont = styled.div`
 	-webkit-box-shadow: 6px 9px 18px rgba(0, 0, 0, 0.5); 
 	-moz-box-shadow: 6px 9px 18px rgba(0, 0, 0, 0.5); 
     padding: 0px;
-
     margin-left:${props=>props.left}px;
     transition: left 1s;
+    margin: 15px;
 `;
 
 const StoreCardImgCont = styled.div`
@@ -62,7 +63,8 @@ const StoreCard = ({
     left=10,
 
 }) => {
-    return <StoreCardCont left={left}>
+    const router = useRouter();
+    return <StoreCardCont left={left} onClick={()=>router.push("/store")}>
         <StoreCardImgCont>
             <StoreCardImg></StoreCardImg>
         </StoreCardImgCont>

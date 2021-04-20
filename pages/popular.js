@@ -4,6 +4,7 @@ import Lowernav from '../comps/Lowernav';
 import StoreCard from '../comps/StoreCard';
 import styled from 'styled-components';
 import SearchBar from '../comps/SearchBar';
+import Poppicks from '../comps/Poppicks';
 // import styles from '../styles/globals.css';
 
 const HomeCont = styled.div`
@@ -13,6 +14,12 @@ const HomeCont = styled.div`
     justify-content: center;
     align-items: center;
     padding: 10px;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
   }
 `;
 
@@ -45,12 +52,19 @@ export default function Home({
         {header}
       </HeaderTitle>
       <SearchBar />
-      <PopularPicks>
-        {PopularPicks}
-      </PopularPicks>
-      <StoreCard />
-      <StoreCard />
-      <StoreCard />
+
+      <div className="items">
+        <Poppicks />
+        <Poppicks />
+      </div>
+      <div className="items">
+        <Poppicks />
+        <Poppicks />
+      </div>
+      <div className="items">
+        <Poppicks />
+        <Poppicks />
+      </div>
     </div>
     <Lowernav />
   </HomeCont>

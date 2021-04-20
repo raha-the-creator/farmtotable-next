@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import CartIcon from '../CartIcon';
 
 const HeaderCont = styled.div`
     display: flex;
@@ -39,18 +40,16 @@ const HeaderTopProfImg = styled.img`
 `;
 
 const HeaderTopCartCont = styled.div`
+    display:flex;
+    justify-content:center;
+    align-items:center;
     background-color: #B6D49E;
-`;
-
-const HeaderTopCartImg = styled.img`
-    width: 40px;
-    height: 40px;
-    margin-top: 30px;
-    margin-right: 25px;
-    filter: brightness(0) invert(1);
-    border-radius: 40%;
-    border: 3px solid #52E74F;
-    padding: 5px;
+    border-radius: 30% 30% 30%;
+    margin-top 40px;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    
 `;
 
 const HeaderBotCont = styled.div`
@@ -88,8 +87,9 @@ const Header = ({
             <HeaderTopMenuImg src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"></HeaderTopMenuImg>
             <HeaderTopProfImg src="https://placekitten.com/100/100"></HeaderTopProfImg>
             <HeaderTopCartCont>
-                <HeaderTopCartImg src="https://cdn.iconscout.com/icon/free/png-256/shopping-cart-452-1163339.png"></HeaderTopCartImg>
+            <CartIcon/>
             </HeaderTopCartCont>
+            
         </HeaderTopCont>
 
         <HeaderBotCont>
@@ -100,7 +100,9 @@ const Header = ({
                 Deliver to: {address}
             </HeaderBotDeliverText>
         </HeaderBotCont>
+        
     </HeaderCont>
+    
 }
 
 export default Header;

@@ -12,7 +12,7 @@ const StoreCardCont = styled.div`
 	-webkit-box-shadow: 6px 9px 18px rgba(0, 0, 0, 0.5); 
 	-moz-box-shadow: 6px 9px 18px rgba(0, 0, 0, 0.5); 
     padding: 0px;
-    margin: 7px;
+
     margin-left:${props=>props.left}px;
     transition: left 1s;
 `;
@@ -59,7 +59,8 @@ const StoreCardDelivery = styled.p`
 const StoreCard = ({
     StoreName="Real Canadian Farmers",
     Delivery="Delivery",
-    left=10
+    left=10,
+
 }) => {
     return <StoreCardCont left={left}>
         <StoreCardImgCont>

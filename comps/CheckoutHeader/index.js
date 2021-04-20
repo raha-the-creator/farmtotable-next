@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import {useRouter} from 'next/router';
-
 
 const HeaderCont = styled.div`
     display: flex;
@@ -45,10 +43,9 @@ const HeaderText = styled.p`
 
 
 const CheckoutHeader = () => {
-    const router = useRouter();
     return <HeaderCont>
         <HeaderTopCont>
-            <HeaderTopMenuImg src="https://naoussahotel.hotelbranding.gr/wp-content/uploads/2018/03/arrow-left-white-2.png" onClick={()=>router.push("/home")}></HeaderTopMenuImg>
+            <HeaderTopMenuImg src="https://naoussahotel.hotelbranding.gr/wp-content/uploads/2018/03/arrow-left-white-2.png"></HeaderTopMenuImg>
             <HeaderText>Checkout cart</HeaderText>
         </HeaderTopCont>
     </HeaderCont>

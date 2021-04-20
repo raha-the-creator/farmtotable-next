@@ -115,17 +115,19 @@ const Lowernav = ({
     nearby="Near By",
     cart="Cart",
     user="User",
-    routeTo="/popular"
+    routeTo2="/popular",
+    routeTo1="/index"
+
 }) => {
     const router = useRouter();
     return <LowernavCont>
-        <LowernavHomeCont>
+        <LowernavHomeCont onClick={()=>router.push(routeTo1)}>
             <LowernavHomeImg src="https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/home-512.png"></LowernavHomeImg>
             <LowernavHomeText>
                 {home}
             </LowernavHomeText>
         </LowernavHomeCont>
-        <LowernavNearbyCont onClick={()=>router.push(routeTo)}>
+        <LowernavNearbyCont onClick={()=>router.push(routeTo2)}>
             <LowernavNearbyImg src="https://cdn3.iconfinder.com/data/icons/glypho-free/64/map-pin-marker-circle-512.png"></LowernavNearbyImg>
             <LowernavNearbyText>
                 {nearby}

@@ -7,9 +7,8 @@ import React, {useState} from 'react';
 import Checkout from '../comps/Checkout';
 import Order from '../comps/Order';
 import CheckoutHeader from '../comps/CheckoutHeader';
-import {useRouter} from 'next/router';
 
-const CheckoutCont = styled.div`
+const HomeCont = styled.div`
   .content {
     display: flex;
     flex-direction: column;
@@ -40,7 +39,7 @@ export default function Home() {
  
 
   console.log("cardstate", cardstate);
-  return <CheckoutCont>
+  return <HomeCont>
     <Head>
       <title>Checkout Page</title>
     </Head>
@@ -53,27 +52,23 @@ export default function Home() {
     StoreName="John's Apples"
     Delivery="Delivery: In 30 minutes"
     left = "30"
-   >
-     
-   </StoreCard>
-
+   ></StoreCard>
     <div className="content">
 
-        <br></br>
-    <Checkout></Checkout>
-        <br></br>
-    <Checkout></Checkout>
-        <br></br>
-    <Checkout></Checkout>
-        <br></br>
-    <Checkout></Checkout>
-        <br></br>
-    <Checkout></Checkout>
-        <br></br>
-    <Order></Order>
-        </div>
-
+    <br></br>
+<Checkout></Checkout>
+    <br></br>
+<Checkout></Checkout>
+    <br></br>
+<Checkout></Checkout>
+    <br></br>
+<Checkout></Checkout>
+    <br></br>
+<Checkout></Checkout>
+    <br></br>
+<Order></Order>
+    </div>
     <Lowernav />
-
-  </CheckoutCont>
+  </HomeCont>
+}
 }

@@ -1,10 +1,10 @@
-import Head from 'next/head';
+import Head from 'next/head'
 import Header from '../comps/Header';
 import Lowernav from '../comps/Lowernav';
 import styled from 'styled-components';
 import React, {useState} from 'react';
-import Textbox from '../comps/Textbox';
-
+import Confirmation from '../comps/Confirmation';
+import BackMenu from '../comps/BackMenu';
 
 const HomeCont = styled.div`
   .content {
@@ -24,34 +24,32 @@ const HeaderTitle = styled.p`
   font-family: 'Montserrat', serif;
 `;
 
-const Images = styled.div`
-width: "500px"
-height: "500px"
+const Paragraph = styled.h2`
+margin-top:50px;
 `;
+
+const Sentence = styled.h3`
+display:flex;
+justify-content:center;
+align-items:center;
+`;
+
 
 
 export default function Home({
 }) {
   return <HomeCont>
     <Head>
-      <title>Article</title>
+      <title>Confirmation</title>
     </Head>
-    <Header />
-    <HeaderTitle>
-    </HeaderTitle>
+   
     <div className="content">
-     <Images>
-         <img src="https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/5/1/0/7/2097015-1-eng-GB/Why-do-people-buy-organic-Separating-myth-from-motivation.jpg" style={{
-           width: "400px",
-           height: "400px",
-           }}>
-
-           </img>
-     </Images>
-
-     <Textbox>
-         
-     </Textbox>
+    <Confirmation></Confirmation>
+    <Paragraph>Payment Confirmation</Paragraph>
+    <Sentence>Your payment was made successfully! 
+        A receipt has been sent to your email.
+    </Sentence>
+    <BackMenu></BackMenu>
     </div>
     <Lowernav />
   </HomeCont>

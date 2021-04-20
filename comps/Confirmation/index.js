@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 const ConfirmationInput = styled.div`
     background-color:#79C779;
-    border-radius: 100px 100px 100px 100px;
-    min-height:150px;
-    min-width:150px;
+    border-radius: 100%;
+    min-height:300px;
+    min-width:300px;
     display:inline-flex;
     align-items:center;
     justify-content:center;
@@ -13,6 +13,7 @@ const ConfirmationInput = styled.div`
     border-style: solid;
     border-width: 9px;
     border-color: white;
+    margin-top:50px;
 `;
 
 

@@ -3,12 +3,12 @@ import styled from 'styled-components';
 
 
 const TextCont = styled.div`
-    background-color:#545454;
+    background-color:#FFF;
     width:300px;
     height:360px;
     border-radius:30px;
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    color: black;
 `;
 
 const Texth2= styled.h2`
@@ -29,8 +29,8 @@ const Textp= styled.p`
 `;
 
 const Textbox = ({ 
-    h2="Header",
-    p=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut felis lacus, volutpat congue turpis at, blandit pulvinar est. Donec et gravida massa. Morbi facilisis ant e in tincidunt laoreet. Nunc fermentum lobortis faucibus. Donec ac massa sit amet mi faucibus egestas eget nec dolor. fermentum lobortis faucibus  est. Donec et onsectetu  massa. Morbi "
+    h2="Should you go organic?",
+    p=" Walk through any grocery store today, and you'll likely see more shelf space devoted to organics—foods that are grown without most synthetic fertilizers and pesticides, and animal products that are free of antibiotics and hormones. Demand for organic food is up, with sales reaching $35.9 billion in 2014. I think people believe these foods are better for them, but we really dont know that they are says registered dietitian Kathy McManus, director of the Department of Nutrition at Harvard-affiliated Brigham and Womens Hospital."
  }) => {
     return <TextCont>
     <Texth2>

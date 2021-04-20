@@ -1,9 +1,10 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import Header from '../comps/Header';
 import Lowernav from '../comps/Lowernav';
 import styled from 'styled-components';
 import React, {useState} from 'react';
 import Textbox from '../comps/Textbox';
+
 
 const HomeCont = styled.div`
   .content {

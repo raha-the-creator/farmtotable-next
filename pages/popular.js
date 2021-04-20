@@ -3,6 +3,8 @@ import Header from '../comps/Header';
 import Lowernav from '../comps/Lowernav';
 import StoreCard from '../comps/StoreCard';
 import styled from 'styled-components';
+import SearchBar from '../comps/SearchBar';
+import Poppicks from '../comps/Poppicks';
 // import styles from '../styles/globals.css';
 
 const HomeCont = styled.div`
@@ -12,6 +14,12 @@ const HomeCont = styled.div`
     justify-content: center;
     align-items: center;
     padding: 10px;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
   }
 `;
 
@@ -31,23 +39,32 @@ const GoogleMap = styled.div`
 `;
 
 export default function Home({
-  header="Farms next to you!"
+  header="Farms next to you!",
+  PopularPicks="Popular Picks"
 }) {
   return <HomeCont>
     <Head>
       <title>Popular Items</title>
     </Head>
     <Header />
-    <HeaderTitle>
-      {header}
-    </HeaderTitle>
     <div className="content">
-      <GoogleMap>
-        <iframe src="//maps.google.com/maps?q=53.3381768,-6.2613077&z=15&output=embed"></iframe>
-      </GoogleMap>
-      <StoreCard />
-      <StoreCard />
-      <StoreCard />
+      <HeaderTitle>
+        {header}
+      </HeaderTitle>
+      <SearchBar />
+
+      <div className="items">
+        <Poppicks />
+        <Poppicks />
+      </div>
+      <div className="items">
+        <Poppicks />
+        <Poppicks />
+      </div>
+      <div className="items">
+        <Poppicks />
+        <Poppicks />
+      </div>
     </div>
     <Lowernav />
   </HomeCont>

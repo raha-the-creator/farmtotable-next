@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const CheckoutCont = styled.div`
     background-color: #e8e8e8;
     height:100px;
-    width:33%;
+    width:90%;
     display:flex;
     justify-content:center;
     align-items:center;

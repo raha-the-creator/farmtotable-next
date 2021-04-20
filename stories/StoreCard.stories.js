@@ -7,3 +7,11 @@ export default {
 }
 
 export const DefaultStoreCard = () => <StoreCard />
+
+export const StoreCardCheckout = () => (
+<StoreCard 
+StoreName="John's Apples"
+Delivery="Delivery: In 30 minutes"
+/>
+
+)

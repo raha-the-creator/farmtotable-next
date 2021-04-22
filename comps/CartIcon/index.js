@@ -18,7 +18,6 @@ const CartCont = styled.div `
 `
 
 
-
 const CartIcon = ({
     cartcolor="white",
     height= 52,

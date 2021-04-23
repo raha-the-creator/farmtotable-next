@@ -5,6 +5,7 @@ import StoreCard from '../comps/StoreCard';
 import styled from 'styled-components';
 import React, {useState} from 'react';
 import Checkout from '../comps/Checkout';
+import {useRouter} from 'next/router';
 
 import ImageButton from '../comps/ImageButton';
 
@@ -35,10 +36,8 @@ export default function Home() {
     left = 100;
     console.log("do stuff")
   }
-
- 
-
   console.log("cardstate", cardstate);
+  const router = useRouter();
   return <HomeCont>
     <Head>
       <title>Checkout Page</title>
@@ -51,7 +50,9 @@ export default function Home() {
     <div className="content">
 
     <br></br>
-<ImageButton text={"Apples & Ice cream"} url= {"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-190724-air-fryer-blooming-apples-0337-landscape-pf-1564770188.png?crop=0.668xw:1.00xh;0.0867xw,0&resize=480:*"}></ImageButton>
+    <div onClick={()=>router.push("/recipe1")}>
+      <ImageButton text={"Apples & Ice cream"} url= {"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-190724-air-fryer-blooming-apples-0337-landscape-pf-1564770188.png?crop=0.668xw:1.00xh;0.0867xw,0&resize=480:*"}></ImageButton>
+    </div>
     <br></br>
     <ImageButton text={"Carmel Apples"} url= {"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/apple-pie-bars-1536693077.png?crop=1.00xw:0.752xh;0,0.168xh&resize=1200:*"}></ImageButton>
     <br></br>

@@ -12,52 +12,51 @@ const RecipeInput = styled.div`
 `;
 
 const RecipeImg = styled.div`
-border-radius: 5%;
-min-width: 414px;
-min-height: 692px;
-background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0.1),
-rgba(255, 255, 255, 0.1), rgba(215, 187, 157, 0.53));
-background-size: cover;
+    border-radius: 5%;
+    min-width: 414px;
+    min-height: 692px;
+    background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1), rgba(215, 187, 157, 0.53));
+    background-size: cover;
 
 `
 
 const RecipeText = styled.p`
-font-family: Montserrat, sans-serif;
-font-weight: 501;
-font-size: 25px;
-margin: 0px;
-color:black;
-position: absolute;
-top: 0;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: 100%;
-text-align: center;
-padding-left: 10px;
-padding-right: 10px;
-padding-top: 10px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 501;
+    font-size: 25px;
+    margin: 0px;
+    color:black;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
 
 `
 
 const RecipeHead = styled.h1`
-font-family: Montserrat, sans-serif;
-margin: 0px;
-color:black;
-position: relative;
-top: 0;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-height: 100%;
-text-align: center;
-padding-left: 10px;
-padding-right: 10px;
-padding-top: 70px;
+    font-family: Montserrat, sans-serif;
+    margin: 0px;
+    color:black;
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 70px;
 `
-
 
 
 const ReadRecipe = ({

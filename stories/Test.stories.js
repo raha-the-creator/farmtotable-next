@@ -3,7 +3,7 @@ import ArticlePreview from '../comps/ArticlePreview';
 import TestUI from '../comps/test';
 
 export default {
-    title: "Example/ArticlePreview",
+    title: "Article Preview",
     component: <TestUI />
 }
 

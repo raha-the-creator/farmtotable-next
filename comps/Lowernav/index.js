@@ -132,7 +132,7 @@ const Lowernav = ({
                 {nearby}
             </LowernavNearbyText>
         </LowernavNearbyCont>
-        <LowernavCartCont  onClick={()=>router.push("/popular")}>
+        <LowernavCartCont  onClick={()=>router.push("/articlesmain")}>
             <LowernavCartImg src="http://cdn.onlinewebfonts.com/svg/img_384216.png"></LowernavCartImg>
             <LowernavCartText>
                 {cart}

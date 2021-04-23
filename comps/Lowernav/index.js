@@ -5,8 +5,8 @@ import {useRouter} from 'next/router';
 const LowernavCont = styled.div`
     display: flex;
     flex-direction: row;
-    background-color: #545454;
-    width: 490px;
+    background-color: #5A7961;
+    width: 500px;
     height: 70px;
     justify-content: center;
     align-items: center;

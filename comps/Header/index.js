@@ -6,8 +6,8 @@ import {useRouter} from 'next/router';
 const HeaderCont = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: #545454;
-    width: 490px;
+    background-color: #5A7961;
+    width: 500px;
     height: 130px;
     justify-content: center;
     align-items: center;

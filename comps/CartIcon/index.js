@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {AiOutlineShoppingCart} from 'react-icons/ai'
+import {AiOutlineShoppingCart} from 'react-icons/ai';
 
 
 const CartCont = styled.div `

@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import {useRouter} from 'next/router';
 import Image from 'next/image';
-
 import StarIcon from '../StarRate'
 import HeartIcon from '../HeartIcon';
 
@@ -10,14 +9,16 @@ const PickCont = styled.div `
     z-index: -1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     position: relative;
     background-color: #E5EFD7;
     color: black;
     border: 2px solid black;
     border-radius: 13px;
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     margin: 15px;
+    padding: 5px;
 
     .hearts {
         display: flex;
@@ -29,7 +30,13 @@ const PickCont = styled.div `
         flex-direction: row;
         margin-top: 15px;
         margin-left: 10px;
+        margin-right: 4px;
         color: #f7cf1b;
+        background-color: white;
+        height: 20px;
+        align-items: center;
+        border-radius: 10px;
+        padding: 2px;
     }
 
     #img {
@@ -40,6 +47,7 @@ const PickCont = styled.div `
     #imgs {
         display: flex;
         flex-direction: row;
+        margin-top: 20px;
     }
 `
 
@@ -51,7 +59,9 @@ const TextCont = styled.div `
 
 const BottomItemsCont = styled.div `
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    margin-top: -5px;
     margin-left: 5px;
 `
 
@@ -60,7 +70,7 @@ const Paragraph = styled.p `
 `
 
 const TinyHeader = styled.h4 `
-    margin-right: 10px;
+margin-right: 11px;
 `
 
 const Poppicks = ({
@@ -75,7 +85,7 @@ const Poppicks = ({
                 <HeartIcon heartcolor="red" />
             </div>
 
-            <div id="img" onClick={()=>router.push("/")}>
+            <div id="img">
             <Image 
                 alt="apple icon"
                 src="/appleicon.png"

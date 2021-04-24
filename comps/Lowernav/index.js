@@ -113,8 +113,8 @@ const LowernavUserText = styled.p`
 const Lowernav = ({
     home="Home",
     nearby="Near By",
-    cart="Articles",
-    user="User",
+    cart="Learn",
+    user="About Us",
     routeTo1="/index",
     routeTo2="/popular"
 }) => {
@@ -126,7 +126,7 @@ const Lowernav = ({
                 {home}
             </LowernavHomeText>
         </LowernavHomeCont>
-        <LowernavNearbyCont onClick={()=>router.push("/")}>
+        <LowernavNearbyCont onClick={()=>router.push("/nearby")}>
             <LowernavNearbyImg src="https://cdn3.iconfinder.com/data/icons/glypho-free/64/map-pin-marker-circle-512.png"></LowernavNearbyImg>
             <LowernavNearbyText>
                 {nearby}

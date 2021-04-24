@@ -14,7 +14,7 @@ const HomeCont = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 0px;
   }
 
   .items {

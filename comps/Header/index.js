@@ -31,6 +31,8 @@ const HeaderTopMenuImg = styled.img`
     margin-left: 25px;
     margin-top: 30px;
     filter: brightness(0) invert(1);
+    opacity: 0;
+    //made hamgurger menu transparent
 `;
 
 const HeaderTopProfImg = styled.img`
@@ -90,7 +92,7 @@ const Header = ({
             <HeaderTopMenuImg src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"></HeaderTopMenuImg>
             <HeaderTopProfImg src="https://placekitten.com/100/100"></HeaderTopProfImg>
             <HeaderTopCartCont onClick={()=>router.push("/checkout")}>
-            <CartIcon/>
+                <CartIcon/>
             </HeaderTopCartCont>
             
         </HeaderTopCont>

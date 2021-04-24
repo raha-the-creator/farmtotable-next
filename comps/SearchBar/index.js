@@ -11,7 +11,7 @@ const SearchBarCont = styled.div`
     background-color: #fff;
     border-radius: 20px;
     border: 2px solid #838383;
-    width: 240px;
+    width: 340px;
     height: 45px;
     padding: 4px;
     margin-top: 20px;

@@ -12,7 +12,8 @@ const HomeCont = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 0px;
+    margin-top: -50px;
   }
 `;
 
@@ -25,8 +26,8 @@ const HeaderTitle = styled.p`
 `;
 
 const Images = styled.div`
-width: "500px"
-height: "500px"
+  width: "500px"
+  height: "500px"
 `;
 
 
@@ -42,16 +43,13 @@ export default function Home({
     <div className="content">
      <Images>
          <img src="https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/5/1/0/7/2097015-1-eng-GB/Why-do-people-buy-organic-Separating-myth-from-motivation.jpg" style={{
-           width: "400px",
+           width: "500px",
            height: "400px",
            }}>
-
            </img>
      </Images>
 
-     <Textbox>
-         
-     </Textbox>
+     <Textbox></Textbox>
     </div>
     <Lowernav />
   </HomeCont>

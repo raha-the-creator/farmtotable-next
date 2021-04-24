@@ -125,7 +125,7 @@ const Poppicks = ({
             </BottomItemsCont>
 
             <div className="addBtn">
-                Add button.
+                Add button
             </div>
     </PickCont>
 }

@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import GoogleMap from '../comps/GoogleMap';
 import SearchBar from '../comps/SearchBar';
 import Poppicks from '../comps/Poppicks';
+import {useRouter} from 'next/router';
 
 const MainCont = styled.div`
 
@@ -42,6 +43,7 @@ const Stores = styled.div`
 export default function Main({
     title = "Trending products"
 }) {
+    const router = useRouter();
     return <MainCont>
         <Head>
             <title>Main Page.</title>
@@ -53,15 +55,15 @@ export default function Main({
             <Title>{title}</Title>
 
             <div className="popitems">
-                <Poppicks />
+                <Poppicks onClick={()=>router.push("/checkout")}/>
                 <Poppicks />
                 <Poppicks />
             </div>
            
             <Stores>
-                <StoreCard StoreName="Super Farmers" Delivery="Delivery in 30 min"/>
-                <StoreCard StoreName="Green" Delivery="Delivery in 20 min"/>
-                <StoreCard StoreName="Magnum" Delivery="Delivery in 15 min"/>
+                <StoreCard StoreName="Super Farmers" Delivery="Delivery in 30 min" storecolor="#03c6fc"/>
+                <StoreCard StoreName="Green" Delivery="Delivery in 20 min" storecolor="#7bfc03"/>
+                <StoreCard StoreName="Magnum" Delivery="Delivery in 15 min" storecolor="#9003fc"/>
             </Stores>
         </ContentCont>
         

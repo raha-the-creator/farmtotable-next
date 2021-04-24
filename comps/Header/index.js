@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import CartIcon from '../CartIcon';
 import {useRouter} from 'next/router';
+import Logo from '../Logo';
 
 const HeaderCont = styled.div`
     display: flex;
@@ -31,7 +32,6 @@ const HeaderTopMenuImg = styled.img`
     margin-left: 25px;
     margin-top: 30px;
     filter: brightness(0) invert(1);
-    opacity: 0;
     //made hamgurger menu transparent
 `;
 
@@ -53,7 +53,6 @@ const HeaderTopCartCont = styled.div`
     width: 60px;
     height: 60px;
     margin-right: 20px;
-    
 `;
 
 const HeaderBotCont = styled.div`
@@ -82,6 +81,20 @@ const HeaderBotDeliverText = styled.p`
     margin-bottom: 5px;
 `;
 
+const HeaderTopLogoCont = styled.div`
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: #B6D49E;
+    border-radius: 30% 30% 30%;
+    margin-top 40px;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    opacity: 0;
+    //made it transparent
+`;
+
 const Header = ({
     userName="user",
     address="Willingdon Ave"
@@ -89,7 +102,10 @@ const Header = ({
     const router = useRouter();
     return <HeaderCont>
         <HeaderTopCont>
-            <HeaderTopMenuImg src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"></HeaderTopMenuImg>
+            <HeaderTopLogoCont>
+                {/* <Logo /> */}
+                {/* <HeaderTopMenuImg href="/logo.png"></HeaderTopMenuImg> */}
+            </HeaderTopLogoCont>
             <HeaderTopProfImg src="https://placekitten.com/100/100"></HeaderTopProfImg>
             <HeaderTopCartCont onClick={()=>router.push("/checkout")}>
                 <CartIcon/>

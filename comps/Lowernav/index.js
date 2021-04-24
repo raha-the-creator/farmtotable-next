@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {useRouter} from 'next/router';
+import {GrGroup} from 'react-icons/gr';
 
 const LowernavCont = styled.div`
     display: flex;
@@ -20,7 +21,7 @@ const LowernavHomeCont = styled.div`
     justify-content: center;
     align-items: center;
     flex: 1;
-    margin: 5px;
+    margin: 7px;
 `;
 
 const LowernavHomeImg = styled.img`
@@ -44,7 +45,7 @@ const LowernavNearbyCont = styled.div`
     justify-content: center;
     align-items: center;
     flex: 1;
-    margin: 5px;
+    margin: 7px;
 `;
 
 const LowernavNearbyImg = styled.img`
@@ -68,7 +69,7 @@ const LowernavCartCont = styled.div`
     justify-content: center;
     align-items: center;
     flex: 1;
-    margin: 5px;
+    margin: 7px;
 `;
 
 const LowernavCartImg = styled.img`
@@ -92,7 +93,14 @@ const LowernavUserCont = styled.div`
     justify-content: center;
     align-items: center;
     flex: 1;
-    margin: 5px;
+    margin: 7px;
+
+    .groupIcon {
+        color: ${props=>props.iconColor};
+        height: 30px;
+        width: 30px;
+        filter: brightness(0) invert(1);
+    }
 `;
 
 const LowernavUserImg = styled.img`
@@ -114,9 +122,10 @@ const Lowernav = ({
     home="Home",
     nearby="Near By",
     cart="Learn",
-    user="About Us",
+    user="Our Team",
     routeTo1="/index",
-    routeTo2="/popular"
+    routeTo2="/popular",
+    iconColor="white",
 }) => {
     const router = useRouter();
     return <LowernavCont>
@@ -138,8 +147,9 @@ const Lowernav = ({
                 {cart}
             </LowernavCartText>
         </LowernavCartCont>
-        <LowernavUserCont>
-            <LowernavUserImg src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/user-512.png"></LowernavUserImg>
+        <LowernavUserCont onClick={()=>router.push("/aboutus")}>
+            <GrGroup className="groupIcon" color={iconColor} />
+            {/* <LowernavUserImg src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/user-512.png"></LowernavUserImg> */}
             <LowernavUserText>
                 {user}
             </LowernavUserText>

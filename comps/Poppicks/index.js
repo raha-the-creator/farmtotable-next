@@ -10,13 +10,14 @@ const PickCont = styled.div `
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: relative;
     background-color: #E5EFD7;
     color: black;
     border: 2px solid black;
     border-radius: 13px;
     width: 160px;
-    height: 160px;
+    min-height: 180px;
     margin: 15px;
     padding: 5px;
 
@@ -49,6 +50,15 @@ const PickCont = styled.div `
         flex-direction: row;
         margin-top: 20px;
     }
+
+    .addBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 120px;
+        background-color:grey;
+    }
 `
 
 const TextCont = styled.div `
@@ -79,7 +89,7 @@ const Poppicks = ({
     heartcolor="#fc0303"
 }) =>{
     const router = useRouter();
-    return <PickCont>
+    return <PickCont onClick={()=>router.push("/")}>
         <div id="imgs">
             <div className="hearts">
                 <HeartIcon heartcolor="red" />
@@ -113,6 +123,10 @@ const Poppicks = ({
                     {text2}
                 </TinyHeader>
             </BottomItemsCont>
+
+            <div className="addBtn">
+                Add button
+            </div>
     </PickCont>
 }
 

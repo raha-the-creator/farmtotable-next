@@ -24,25 +24,22 @@ const RecipeImg = styled.div`
 const RecipeText = styled.p`
     font-family: Montserrat, sans-serif;
     font-weight: 501;
-    font-size: 25px;
+    font-size: 20px;
     margin: 0px;
     color:black;
-    position: absolute;
-    top: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-top: 5px;
     align-items: center;
     height: 100%;
-    text-align: center;
-    padding-left: 10px;
+    width: 350px;
+    padding-left: 20px;
     padding-right: 10px;
     padding-top: 10px;
 
 `
 
 const RecipeHead = styled.h1`
-    font-family: Montserrat, sans-serif;
+    font-family: Merriweather;
     margin: 0px;
     color:black;
     position: relative;
@@ -60,8 +57,13 @@ const RecipeHead = styled.h1`
 
 
 const ReadRecipe = ({
-    text="Wash ,dry and cut the apples. You can use the cores of the apple as compost. Mix cinnamon and sugar together in a bowl. Coat apples in cinnamon and sugar mixture.Bake in the oven at 360 degrees for ten to fifteen minutes. Serve with or without ice cream. Enjoy!",
-    header="Apples and Ice cream"
+    text1="• Wash ,dry and cut the apples. You can use the cores of the apple as compost.",
+    text2="• Mix cinnamon and sugar together in a bowl.",
+    text3="• Coat apples in cinnamon and sugar mixture.",
+    text4="• Bake in the oven at 360 degrees for ten to fifteen minutes.",
+    text5="• Serve with or without ice cream.",
+    text6="• Enjoy!",
+    header="Apple and Ice Cream"
 }) => {
 
     return <div style={{
@@ -76,7 +78,12 @@ const ReadRecipe = ({
         <RecipeHead>{header}</RecipeHead>
         </div>
         <div>
-        <RecipeText>{text}</RecipeText>
+            <RecipeText>{text1}</RecipeText>
+            <RecipeText>{text2}</RecipeText>
+            <RecipeText>{text3}</RecipeText>
+            <RecipeText>{text4}</RecipeText>
+            <RecipeText>{text5}</RecipeText>
+            <RecipeText>{text6}</RecipeText>
         </div>
         </RecipeImg>
     </RecipeInput>

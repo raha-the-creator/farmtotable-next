@@ -30,7 +30,7 @@ const StoreCardImg = styled.div`
     width: 65px;
     margin: 15px;
     border-radius: 10px;
-    background-color: #EF6262;
+    background-color:${props=>props.storecolor};
 `;
 
 const StoreCardInfoCont = styled.div`
@@ -57,21 +57,40 @@ const StoreCardDelivery = styled.p`
     margin-top: 10px;
 `;
 
+const StoreCardDistCont = styled.div`
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    margin-right: 10px;
+`;
+
+const StoreDistance = styled.p`
+    font-family: Montserrat, sans-serif;
+    font-size: 17px;
+    font-weight: 550;
+`;
+
 const StoreCard = ({
     StoreName="Real Canadian Farmers",
     Delivery="Delivery",
     left=10,
-
+    storecolor="#fcba03",
+    distance="10km"
 }) => {
     const router = useRouter();
     return <StoreCardCont left={left} onClick={()=>router.push("/store")}>
         <StoreCardImgCont>
-            <StoreCardImg></StoreCardImg>
+            <StoreCardImg storecolor={storecolor}></StoreCardImg>
         </StoreCardImgCont>
         <StoreCardInfoCont>
             <StoreCardName>{StoreName}</StoreCardName>
             <StoreCardDelivery>{Delivery}</StoreCardDelivery>
         </StoreCardInfoCont>
+        <StoreCardDistCont>
+            <StoreDistance>{distance}</StoreDistance>
+        </StoreCardDistCont>
     </StoreCardCont>
 }
 

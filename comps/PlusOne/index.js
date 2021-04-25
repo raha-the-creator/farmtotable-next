@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {useRouter} from 'next/router';
 
 const PlusOneInput = styled.button`
         background-color:#79C779;
@@ -13,24 +14,22 @@ const PlusOneInput = styled.button`
 `;
 
 
-const PlusOne = () => {
+const PlusOne = ({
+    route="/"
+}) => {
+    const router = useRouter();
+        return <div style={{
+            alignItems:"center",
+            justifyContent: "center",
 
-return <div style={{
-    alignItems:"center",
-    justifyContent: "center",
-
-}}>
-<PlusOneInput>
-    <img src="https://img.icons8.com/ios/72/plus--v1.png" style={{
-        width: "35px",
-        height: "35px",
-     
-
-    }}></img>
-</PlusOneInput>
- 
-
-</div>
+        }} onClick={()=>router.push({route})}>
+        <PlusOneInput>
+            <img src="https://img.icons8.com/ios/72/plus--v1.png" style={{
+                width: "35px",
+                height: "35px",
+            }}></img>
+        </PlusOneInput>
+        </div>
 }
 
 export default PlusOne;

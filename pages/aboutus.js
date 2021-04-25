@@ -36,9 +36,9 @@ export default function AboutUs({
            <p>Lorem ipsum fkabfkjdsn kldfaklj jha fdskljf asdjlf</p>
            <h4>Developer: Amelie Panja</h4>
            <p>Lorem ipsum fkabfkjdsn kldfaklj jha fdskljf asdjlf</p>
-           <h4>Lead Developer: Lance Bulseco</h4>
+           <h4>Graphic Designer: Lance Bulseco</h4>
            <p>Lorem ipsum fkabfkjdsn kldfaklj jha fdskljf asdjlf</p>
-           <h4>Lead Developer: Celine Junn Nguyen</h4>
+           <h4>Graphic Designer/Developer Junn Nguyen</h4>
            <p>Lorem ipsum fkabfkjdsn kldfaklj jha fdskljf asdjlf</p>
         </ContentCont>
 

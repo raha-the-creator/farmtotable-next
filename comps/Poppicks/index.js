@@ -86,10 +86,11 @@ margin-right: 11px;
 const Poppicks = ({
     text1="Organic Red Apples",
     text2="$25",
-    heartcolor="#fc0303"
+    heartcolor="#fc0303",
+    route1="/article"
 }) =>{
     const router = useRouter();
-    return <PickCont onClick={()=>router.push("/")}>
+    return <PickCont>
         <div id="imgs">
             <div className="hearts">
                 <HeartIcon heartcolor="red" />
@@ -124,7 +125,7 @@ const Poppicks = ({
                 </TinyHeader>
             </BottomItemsCont>
 
-            <div className="addBtn">
+            <div className="addBtn" onClick={()=>router.push({route1})}>
                 Add button
             </div>
     </PickCont>

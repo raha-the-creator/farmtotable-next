@@ -5,6 +5,7 @@ import StoreCard from '../comps/StoreCard';
 import styled from 'styled-components';
 import SearchBar from '../comps/SearchBar';
 import Poppicks from '../comps/Poppicks';
+import PoppicksNew from '../comps/PoppicksNew';
 import StoreHead from '../comps/StoreHead';
 // import styles from '../styles/globals.css';
 
@@ -21,6 +22,28 @@ const HomeCont = styled.div`
     display: flex;
     flex-direction: row;
     margin: 10px;
+    margin-top: 250px;
+    margin-bottom: 240px;
+  }
+
+  .products {
+    marging-bottom: 20px;
+  }
+
+  #top {
+    margin-top: 0px;
+  }
+
+  #bot {
+    margin-bottom: 20px;
+  }
+
+  #item1{
+    margin-left: 10px;
+  }
+
+  #item2{
+    margin-left: -200px;
   }
 `;
 
@@ -67,18 +90,34 @@ export default function Home({
         {PopularPicks}
       </PopularPicksText>
 
-      <div className="items">
-        <Poppicks />
-        <Poppicks />
-      </div>
-      <div className="items">
-        <Poppicks />
-        <Poppicks />
-      </div>
-      <div className="items">
-        <Poppicks />
-        <Poppicks />
-      </div>
+    <div className="products">
+        <div className="items" id="top">
+          <div id="item1">
+            <PoppicksNew />
+          </div>
+          <div id="item2">
+            <PoppicksNew />
+          </div>
+        </div>
+        <div className="items">
+          <div id="item1">
+            <PoppicksNew />
+          </div>
+          <div id="item2">
+            <PoppicksNew />
+          </div>
+        </div>
+        <div className="items">
+          <div id="item1">
+            <PoppicksNew />
+          </div>
+          <div id="item2">
+            <PoppicksNew />
+          </div>
+        </div>
+    </div>
+      
+      
     </div>
     <Lowernav />
   </HomeCont>

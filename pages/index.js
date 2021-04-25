@@ -6,7 +6,9 @@ import styled from 'styled-components';
 import GoogleMap from '../comps/GoogleMap';
 import SearchBar from '../comps/SearchBar';
 import Poppicks from '../comps/Poppicks';
+import PoppicksNew from '../comps/PoppicksNew';
 import {useRouter} from 'next/router';
+import PlusOne from '../comps/PlusOne';
 
 const MainCont = styled.div`
 
@@ -24,6 +26,18 @@ const ContentCont = styled.div`
         display: flex;
         justify-content: center;
         margin: 0px;
+        height: 280px;
+        flex-direction: row;
+    }
+
+    #item1 {
+        margin-left: 100px;
+    }
+    #item2 {
+        margin-left: 200px;
+    }
+    #item3 {
+        margin-left: 300px;
     }
 `;
 
@@ -41,7 +55,7 @@ const Stores = styled.div`
 `;
 
 export default function Main({
-    title = "Trending products"
+    title = "Trending products",
 }) {
     const router = useRouter();
     return <MainCont>
@@ -51,13 +65,22 @@ export default function Main({
         <Header />
 
         <ContentCont>
-            <div className="searchbar"><SearchBar /></div>
+            <div className="searchbar" >
+                <SearchBar />
+            </div>
             <Title>{title}</Title>
 
             <div className="popitems">
-                <Poppicks onClick={()=>router.push("/checkout")}/>
-                <Poppicks />
-                <Poppicks />
+                {/* <Poppicks route1="/checkout"/> */}
+                <div id="item1">
+                    <PoppicksNew />
+                </div>
+                <div id="item2">
+                    <PoppicksNew />
+                </div>
+                <div id="item3">
+                    <PoppicksNew />
+                </div>
             </div>
            
             <Stores>

@@ -18,8 +18,19 @@ const ContentCont = styled.div`
         width: 100px;
         height: 100px;
     }
+
+    .content {
+        margin: 0px;
+        padding: 0px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
 `;
 
+
+const Title = styled.h3`
+    text-align: center;
+`;
 export default function AboutUs({
 
 }) {
@@ -31,15 +42,20 @@ export default function AboutUs({
         <Header />
 
         <ContentCont>
-           <h3>About our team</h3>
-           <h4>Lead Developer: Rakhymzhan Duisek</h4>
-           <p>Lorem ipsum fkabfkjdsn kldfaklj jha fdskljf asdjlf</p>
-           <h4>Developer: Amelie Panja</h4>
-           <p>Lorem ipsum fkabfkjdsn kldfaklj jha fdskljf asdjlf</p>
-           <h4>Graphic Designer: Lance Bulseco</h4>
-           <p>Lorem ipsum fkabfkjdsn kldfaklj jha fdskljf asdjlf</p>
-           <h4>Graphic Designer/Developer Junn Nguyen</h4>
-           <p>Lorem ipsum fkabfkjdsn kldfaklj jha fdskljf asdjlf</p>
+
+            <Title>
+                <h2>About our team</h2>
+            </Title>
+            <div className="content">
+                <h4>Lead Developer: Rakhymzhan Duisek</h4>
+                <p>Lorem ipsum fkabfkjdsn kldfaklj jha fdskljf asdjlf</p>
+                <h4>Developer: Amelie Panja</h4>
+                <p>Lorem ipsum fkabfkjdsn kldfaklj jha fdskljf asdjlf</p>
+                <h4>Graphic Designer: Lance Bulseco</h4>
+                <p>Lorem ipsum fkabfkjdsn kldfaklj jha fdskljf asdjlf</p>
+                <h4>Graphic Designer/Developer Junn Nguyen</h4>
+                <p>Lorem ipsum fkabfkjdsn kldfaklj jha fdskljf asdjlf</p>
+            </div>
         </ContentCont>
 
         <Lowernav />
